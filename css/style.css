@@ -1,0 +1,265 @@
+.navbar {
+    background-color: transparent;
+  }
+
+
+  .hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/painelrosa.jpg) no-repeat center center/cover;
+    animation: zoomMove 20s ease-in-out infinite alternate;
+    filter: brightness(0.8) blur(1.1px);
+    z-index: 1;
+  }
+
+  @keyframes zoomMove {
+    0% { transform: scale(1) translateX(0); }
+    50% { transform: scale(1.1) translateX(-10px); }
+    100% { transform: scale(1.05) translateX(10px); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-content img {
+    width: 200px;
+    height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: calc(2rem + 1vw);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .btn-agende {
+    margin-top: 40px;
+    background-color: #8a1e2b;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    text-decoration: none;
+  }
+
+  .btn-agende:hover {
+    background-color: palevioletred;
+    transform: scale(1.05);
+    text-decoration: none;
+    list-style: none;
+    color: bisque;
+  }
+
+/* seção sobre */
+
+.sobre-section {
+    background: #fdfcfc;
+  }
+  
+  .sobre-section h2 {
+    color: #641520;
+    font-weight: bold;
+  }
+  
+  .sobre-section p {
+    color: #333;
+  }
+  
+  .sobre-section img {
+    border: 5px solid #eaeaea;
+    transition: transform 0.3s ease;
+  }
+  
+  .sobre-section img:hover {
+    transform: scale(1.03);
+  }
+
+/* botão do sobre   */
+ a.btn-personalizado{
+  background-color: #641520;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+ a.btn-personalizado:hover {
+      background-color: #8a1e2b;
+      transform: scale(1.05);
+      text-decoration: none;
+      list-style: none;
+      color: bisque;
+    }
+
+/* seção serviços */
+.servicos-section {
+    background-color: #fff5f6;
+  }
+  
+  .servico-box {
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .servico-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+  
+  .servicos-section h2 {
+    color: #641520;
+  }
+
+  /* galerias de fotos */
+  .galeria-img-box {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    position: relative;
+    height: 300px; /* Altura fixa */
+  }
+  
+  .galeria-img-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Centraliza e cobre o espaço */
+    transition: transform 0.4s ease-in-out;
+    display: block;
+  }
+  
+  .galeria-img-box:hover img {
+    transform: scale(1.08);
+  }
+  
+  .galeria-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(100, 21, 32, 0.75);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+  }
+  
+  .galeria-img-box:hover .galeria-overlay {
+    opacity: 1;
+  }
+
+/* seção banner-contato */
+.brilhar-esmalte {
+  background-color: #ffe4e6; /* Rosa claro */
+  padding: 20px; /* Espaçamento interno para destacar o fundo */
+  border-radius: 8px; /* Bordas arredondadas para um visual mais suave */
+}
+
+.esmaltes-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centraliza a imagem */
+}
+
+.text-brilho {
+  color: #641520;
+  text-shadow: 0 0 5px rgba(250, 205, 210, 0.7);
+  text-align: center; /* Centraliza o texto */
+  margin-top: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* seção do botão whatsapp */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: green; /* Cor verde do WhatsApp */
+  color: #FFFFFF; /* Cor do ícone */
+  width: 60px; /* Largura igual à altura */
+  height: 60px; /* Altura igual à largura */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Torna o botão redondo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  font-size: 24px; /* Tamanho do ícone */
+  z-index: 999; /* Garante que o botão fique acima de outros elementos */
+  transition: background 0.3s; /* Transição suave */
+  text-decoration: none; /* Remove sublinhado do link */
+}
+
+@keyframes shake {
+0%, 100% {
+  transform: translateX(0);
+}
+25% {
+  transform: translateX(-5px);
+}
+50% {
+  transform: translateX(5px);
+}
+75% {
+  transform: translateX(-5px);
+}
+}
+
+.whatsapp-btn {
+background-color: palevioletred; /* Cor inicial */
+text-decoration: none; /* Garante que não haja sublinhado */
+animation: shake 2.0s infinite; /* Adiciona a animação de tremor contínua */
+}
+
+/* footer */
+.footer-pmp {
+  background: linear-gradient(to right, #641520, #8a1e2b);
+  color: white;
+}
+
+.footer-pmp .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-pmp .social-icon {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-pmp .social-icon:hover {
+  color: #ffd1da;
+  transform: scale(1.2);
+}
+
+footer a i {
+  padding: 5px;
+}
